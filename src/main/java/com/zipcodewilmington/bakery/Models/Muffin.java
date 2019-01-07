@@ -1,8 +1,18 @@
 package com.zipcodewilmington.bakery.Models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Muffin {
+
+    @Id
+    @GeneratedValue
     private Long id;
 
+    @Column(name = "FLAVOR")
     private String flavor;
 
     public Muffin(String flavor) {

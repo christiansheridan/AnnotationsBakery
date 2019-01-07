@@ -1,12 +1,25 @@
 package com.zipcodewilmington.bakery.Models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Baker {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "BAKER_ID")
     private Long id;
 
+    @Column(name = "BAKER_NAME")
     private String name;
 
+    @Column(name = "EMPLOYEE_ID")
     private String employeeId;
 
+    @Column(name = "SPECIALTY")
     private String specialty;
 
     public Baker(String name, String employeeId, String specialty) {
